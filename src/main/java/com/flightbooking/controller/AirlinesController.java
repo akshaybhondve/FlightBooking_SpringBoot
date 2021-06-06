@@ -25,7 +25,7 @@ public class AirlinesController {
 	    private AirlineService airlineService;  
 	      
 	    @PostMapping("save-airline")  
-	    public Airline saveStudent(@RequestBody Airline airline) {  
+	    public Airline saveAirline(@RequestBody Airline airline) {  
 	         return airlineService.saveAirline(airline);  
 	          
 	    }  
@@ -37,7 +37,7 @@ public class AirlinesController {
 	    }  
 	      
 	    @DeleteMapping("delete-airline/{airline_id}")  
-	    public void deleteStudent(@PathVariable("airline_id") Long airline_id,Airline airline) {  
+	    public void deleteAirline(@PathVariable("airline_id") Long airline_id,Airline airline) {  
 	    	airline.setAirline_id(airline_id);  
 	        airlineService.deleteAirline(airline);  
 	    }  
@@ -50,7 +50,7 @@ public class AirlinesController {
 	    }  
 	      
 	    @PostMapping("update-airline/{airline_id}")  
-	    public Airline updateStudent(@RequestBody Airline airline,@PathVariable("airline_id") Long airline_id) {  
+	    public Airline updateAirline(@RequestBody Airline airline,@PathVariable("airline_id") Long airline_id) {  
 	    	airline.setAirline_id(airline_id);  
 	        return airlineService.updateAirline(airline);  
 	    }  

@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.flightbooking.model.Airline;
 import com.flightbooking.model.Discount;
-import com.flightbooking.service.AirlineService;
 import com.flightbooking.service.DiscountService;
 
 @RestController
@@ -21,7 +19,7 @@ import com.flightbooking.service.DiscountService;
 public class DiscountController {
 
 	@Autowired
-    private DiscountService discountService;  
+    private DiscountService discountService;  	
       
     @PostMapping("save-discount")  
     public Discount saveDiscount(@RequestBody Discount discount) {  
