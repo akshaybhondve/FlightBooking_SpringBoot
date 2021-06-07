@@ -1,6 +1,7 @@
 package com.flightbooking.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -25,5 +26,10 @@ public class DiscountServiceImpl implements DiscountService{
     @Override  
     public List<Discount> getDiscounts() {  
         return discountDao.findAll();  
-    }  
+    }
+    
+    @Override  
+    public Optional<Discount> getDiscountByCode(String code) {  
+        return discountDao.findDiscountByCode(code);  
+    }
 }
