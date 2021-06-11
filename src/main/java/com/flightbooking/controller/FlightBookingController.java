@@ -25,8 +25,7 @@ public class FlightBookingController {
       
     @PostMapping("save-booking")  
     public FlightBooking saveFlightBooking(@RequestBody FlightBooking booking) {  
-         return flightBookingService.saveFlightBooking(booking);  
-          
+         return flightBookingService.saveFlightBooking(booking);
     }  
       
     @GetMapping("bookings")  
