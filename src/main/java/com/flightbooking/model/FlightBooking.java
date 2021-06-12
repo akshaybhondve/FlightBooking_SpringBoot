@@ -26,7 +26,7 @@ public class FlightBooking {
     private String discount;
     private String onward_seat;
     private String return_seat;
-    private Integer final_flight_rate;
+    private Long final_flight_rate;
     
 	public Long getFlightbooking_id() {
 		return flightbooking_id;
@@ -106,10 +106,10 @@ public class FlightBooking {
 	public void setReturn_seat(String return_seat) {
 		this.return_seat = return_seat;
 	}
-	public Integer getFinal_flight_rate() {
+	public Long getFinal_flight_rate() {
 		return final_flight_rate;
 	}
-	public void setFinal_flight_rate(Integer final_flight_rate) {
+	public void setFinal_flight_rate(Long final_flight_rate) {
 		this.final_flight_rate = final_flight_rate;
 	}
 	
