@@ -1,5 +1,6 @@
 package com.flightbooking.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,16 +19,20 @@ public class User {
 	
 	private String password;
 	
+	@Column(columnDefinition="tinyint(1) default 0")
+	private Boolean isAdmin;
+	
 	public User() {
 		
 	}
 
-	public User(int user_id, String email, String username, String password) {
+	public User(int user_id, String email, String username, String password, Boolean isAdmin) {
 		super();
 		this.user_id = user_id;
 		this.email = email;
 		this.username = username;
 		this.password = password;
+		this.isAdmin = isAdmin;
 	}
 
 	public int getUser_id() {
@@ -60,7 +65,17 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}	
+	}
+
+	public Boolean getIsAdmin() {
+		return isAdmin;
+	}
+
+	public void setIsAdmin(Boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
+
+
 	
 	
 	

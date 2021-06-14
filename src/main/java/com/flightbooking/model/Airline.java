@@ -1,5 +1,6 @@
 package com.flightbooking.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +17,8 @@ public class Airline {
 	
     private String airline_name;  
     
-    private String airline_logo;  
+    
+    private String airline_logo;
     
     private String airline_contact;
     
@@ -35,12 +37,6 @@ public class Airline {
 	public void setAirline_name(String airline_name) {
 		this.airline_name = airline_name;
 	}
-	public String getAirline_logo() {
-		return airline_logo;
-	}
-	public void setAirline_logo(String airline_logo) {
-		this.airline_logo = airline_logo;
-	}
 	public String getAirline_contact() {
 		return airline_contact;
 	}
@@ -53,10 +49,13 @@ public class Airline {
 	public void setAirline_address(String airline_address) {
 		this.airline_address = airline_address;
 	}
-	@Override
-	public String toString() {
-		return "Airline [airline_id=" + airline_id + ", airline_name=" + airline_name + ", airline_logo=" + airline_logo
-				+ ", airline_contact=" + airline_contact + ", airline_address=" + airline_address + "]";
+	public String getAirline_logo() {
+		return airline_logo;
 	}
+	public void setAirline_logo(String airline_logo) {
+		this.airline_logo = airline_logo;
+	}
+
+	
     
 }

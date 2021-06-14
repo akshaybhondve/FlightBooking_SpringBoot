@@ -53,6 +53,6 @@ public class AirlinesController {
 	    public Airline updateAirline(@RequestBody Airline airline,@PathVariable("airline_id") Long airline_id) {  
 	    	airline.setAirline_id(airline_id);  
 	        return airlineService.updateAirline(airline);  
-	    }  
+	    }
 
 }
