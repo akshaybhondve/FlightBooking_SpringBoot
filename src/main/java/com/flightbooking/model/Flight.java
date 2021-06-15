@@ -14,7 +14,7 @@ public class Flight {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long flight_id;
 	
-	private Long airline_id;
+	private String airline_name;
 	
 	private String fromLocation;
 	
@@ -26,14 +26,6 @@ public class Flight {
 
 	public void setFlight_id(Long flight_id) {
 		this.flight_id = flight_id;
-	}
-
-	public Long getAirline_id() {
-		return airline_id;
-	}
-
-	public void setAirline_id(Long airline_id) {
-		this.airline_id = airline_id;
 	}
 
 	public String getFromLocation() {
@@ -50,6 +42,14 @@ public class Flight {
 
 	public void setToLocation(String toLocation) {
 		this.toLocation = toLocation;
+	}
+
+	public String getAirline_name() {
+		return airline_name;
+	}
+
+	public void setAirline_name(String airline_name) {
+		this.airline_name = airline_name;
 	}
 	
 	
