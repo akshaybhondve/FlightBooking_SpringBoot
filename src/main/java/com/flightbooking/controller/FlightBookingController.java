@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.flightbooking.model.Discount;
 import com.flightbooking.model.FlightBooking;
+import com.flightbooking.model.ScheduleFlight;
 import com.flightbooking.service.FlightBookingService;
+import com.flightbooking.service.ScheduleFlightService;
 
 @RestController
 @CrossOrigin(origins="http://localhost:4200")  
@@ -21,12 +24,21 @@ import com.flightbooking.service.FlightBookingService;
 public class FlightBookingController {
 
 	@Autowired
-    private FlightBookingService flightBookingService;  
+    private FlightBookingService flightBookingService; 
+	
+	@Autowired
+    private ScheduleFlightService scheduleFlightService;
       
     @PostMapping("save-booking")  
     public FlightBooking saveFlightBooking(@RequestBody FlightBooking booking) {  
          return flightBookingService.saveFlightBooking(booking);
-    }  
+    }
+    
+    @GetMapping("from_location-{from_location}/to_location-{to_location}")  
+    public List<ScheduleFlight> getScheduledFlightsByLocation(@PathVariable("from_location") String from_location,@PathVariable("to_location") String to_location) {  
+        return scheduleFlightService.getScheduledFlightsByLocation(from_location,to_location);  
+          
+    }
       
     @GetMapping("bookings")  
     public List<FlightBooking> getAllFlightBookings() {  

@@ -10,5 +10,6 @@ public interface TicketCategoryService {
 	public TicketCategory saveTicketCategory(TicketCategory ticket);
     public List<TicketCategory> getTicketCategories();
     public Optional<TicketCategory> getTicketCategoryByTicketCategoryID(Long TicketCategoryID);
+    public List<TicketCategory> getTicketPricesByAirlineName(String airlineName);
 }
 

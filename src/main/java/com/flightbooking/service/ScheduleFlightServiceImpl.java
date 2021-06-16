@@ -32,4 +32,9 @@ public class ScheduleFlightServiceImpl implements ScheduleFlightService{
 	public Optional<ScheduleFlight> getScheduleFlightByID(Long id) {
 		return flightDao.findById(id);  
 	}
+	
+	@Override
+	public List<ScheduleFlight> getScheduledFlightsByLocation(String fromLocation, String toLocation){
+		return flightDao.findByFromLocationAndToLocation(fromLocation,toLocation);
+	}
 }

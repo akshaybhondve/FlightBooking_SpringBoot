@@ -28,6 +28,8 @@ public class Flight {
 		this.flight_id = flight_id;
 	}
 
+
+
 	public String getFromLocation() {
 		return fromLocation;
 	}

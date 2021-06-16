@@ -41,5 +41,11 @@ public class TicketCategoryController {
         return categoryService.getTicketCategoryByTicketCategoryID(ticket_category_id);  
           
     }
+    
+    @GetMapping("airline_name-{airline_name}")  
+    public List<TicketCategory> getTicketPricesByAirlineName(@PathVariable("airline_name") String airline_name) {  
+        return categoryService.getTicketPricesByAirlineName(airline_name);  
+          
+    }
 	
 }

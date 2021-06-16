@@ -10,4 +10,5 @@ public interface ScheduleFlightService {
 	public ScheduleFlight saveScheduleFlight(ScheduleFlight schedule);
     public List<ScheduleFlight> getScheduleFlights();
     public Optional<ScheduleFlight> getScheduleFlightByID(Long id);
+    public List<ScheduleFlight> getScheduledFlightsByLocation(String fromLocation, String toLocation);
 }

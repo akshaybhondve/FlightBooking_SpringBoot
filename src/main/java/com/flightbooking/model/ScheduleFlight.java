@@ -1,15 +1,15 @@
 package com.flightbooking.model;
 
 
+import java.time.LocalDate;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="schedule_flight")
@@ -24,11 +24,13 @@ public class ScheduleFlight {
     
     private Long flight_id;
     
-    private String from_location;
+    @Column(name="from_location")
+    private String fromLocation;
     
-    private String to_location;
+    @Column(name="to_location")
+    private String toLocation;
     
-    private String fligh_date;  
+    private LocalDate flight_date;  
     
     private String flight_time;
     
@@ -62,28 +64,13 @@ public class ScheduleFlight {
 		this.flight_id = flight_id;
 	}
 
-	public String getFrom_location() {
-		return from_location;
+	
+	public LocalDate getFlight_date() {
+		return flight_date;
 	}
 
-	public void setFrom_location(String from_location) {
-		this.from_location = from_location;
-	}
-
-	public String getTo_location() {
-		return to_location;
-	}
-
-	public void setTo_location(String to_location) {
-		this.to_location = to_location;
-	}
-
-	public String getFligh_date() {
-		return fligh_date;
-	}
-
-	public void setFligh_date(String fligh_date) {
-		this.fligh_date = fligh_date;
+	public void setFlight_date(LocalDate flight_date) {
+		this.flight_date = flight_date;
 	}
 
 	public String getFlight_time() {
@@ -116,6 +103,22 @@ public class ScheduleFlight {
 
 	public void setNo_of_economyseat(Integer no_of_economyseat) {
 		this.no_of_economyseat = no_of_economyseat;
+	}
+
+	public String getFromLocation() {
+		return fromLocation;
+	}
+
+	public void setFromLocation(String fromLocation) {
+		this.fromLocation = fromLocation;
+	}
+
+	public String getToLocation() {
+		return toLocation;
+	}
+
+	public void setToLocation(String toLocation) {
+		this.toLocation = toLocation;
 	}
     
     

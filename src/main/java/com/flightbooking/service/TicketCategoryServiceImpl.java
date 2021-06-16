@@ -34,5 +34,10 @@ public class TicketCategoryServiceImpl implements TicketCategoryService{
 		return ticketCategoryDao.findById(TicketCategoryID);  
 	}
 
+	@Override
+	public List<TicketCategory> getTicketPricesByAirlineName(String airlineName) {
+		return ticketCategoryDao.getTicketPricesByAirlineName(airlineName);  
+	}
+
 	 
 }
